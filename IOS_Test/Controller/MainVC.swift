@@ -75,7 +75,7 @@ class MainVC: UIViewController {
     }
     
     private func loadData(){
-        retrieveData(url: getApi()) {[weak self] finish in
+        retrieveData(url: getApi(pageNumber: pageNumber)) {[weak self] finish in
             guard let self = self else{return}
             if finish{
                 self.spinner.stopAnimating()
